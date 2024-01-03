@@ -298,3 +298,24 @@ There are cases where we miss important work in this field. We welcome opening P
 ## 🤝 Acknowledgement
 
 We referred to the template of [Knowledge Editing for LLMs Papers](https://github.com/zjunlp/KnowledgeEditingPapers) when building this paper list. Thanks to its authors for their impressive work!
+
+---
+
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="
+      https://api.star-history.com/svg?repos=lyy1994/awesome-data-contamination&type=Date&theme=dark
+    "
+  />
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="
+      https://api.star-history.com/svg?repos=lyy1994/awesome-data-contamination&type=Date
+    "
+  />
+  <img
+    alt="Star History Chart"
+    src="https://api.star-history.com/svg?repos=lyy1994/awesome-data-contamination&type=Date"
+  />
+</picture>

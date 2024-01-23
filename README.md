@@ -257,6 +257,7 @@ A reference list of contamination detectors and contamination indices is as foll
           <li><a href="https://github.com/stanford-crfm/helm">HELM</a> [<a href="https://github.com/stanford-crfm/helm/blob/main/scripts/data_overlap/README.md">scripts</a>]</li>
           <li><a href="https://github.com/open-compass/opencompass">OpenCompass</a> [<a href="https://github.com/open-compass/opencompass/blob/main/docs/en/advanced_guides/contamination_eval.md">docs</a>]</li>
           <li><a href="https://github.com/liyucheng09/Contamination_Detector">Contamination Detector for LLMs Evaluation</a></li>
+          <li><a href="https://github.com/nlx-group/overlapy">Overlapy</a></li>
           <li>......</li>
         </ul>
       </td>

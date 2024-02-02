@@ -210,6 +210,7 @@ Many contamination detection work and contamination indices are done on *open-so
           <li><a href="https://zenodo.org/records/3608135">Pushshift Reddit</a></li>
           <li><a href="https://github.com/togethercomputer/RedPajama-Data">RedPajama</a></li>
           <li><a href="https://arxiv.org/abs/2303.03915">ROOTS</a></li>
+          <li><a href="https://github.com/allenai/dolma">Dolma</a></li>
           <li>......</li>
         </ul>
       </td>

@@ -59,6 +59,14 @@ In this paper list, we tag each paper with one or more labels defined in the tab
     </details>
 
     > This paper is not all about data contamination. Still, it is the very first paper that officially discusses the data contamination problem and presents an N-gram approach to identify the contamination risk of benchmarks (Appendix C).
+1. **Documenting Large Webtext Corpora: A Case Study on the Colossal Clean Crawled Corpus** (EMNLP 2021) ![](https://img.shields.io/badge/Reactive-green)![](https://img.shields.io/badge/Analysis-brown) <br />
+    *Jesse Dodge, Maarten Sap, Ana Marasović, William Agnew, Gabriel Ilharco, Dirk Groeneveld, Margaret Mitchell, Matt Gardner*
+    [[paper](https://aclanthology.org/2021.emnlp-main.98/)]
+    <details><summary><b>Abstract</b></summary>
+    Large language models have led to remarkable progress on many NLP tasks, and researchers are turning to ever-larger text corpora to train them. Some of the largest corpora available are made by scraping significant portions of the internet, and are frequently introduced with only minimal documentation. In this work we provide some of the first documentation for the Colossal Clean Crawled Corpus (C4; Raffel et al., 2020), a dataset created by applying a set of filters to a single snapshot of Common Crawl. We begin by investigating where the data came from, and find a significant amount of text from unexpected sources like patents and US military websites. Then we explore the content of the text itself, and find machine-generated text (e.g., from machine translation systems) and evaluation examples from other benchmark NLP datasets. To understand the impact of the filters applied to create this dataset, we evaluate the text that was removed, and show that blocklist filtering disproportionately removes text from and about minority individuals. Finally, we conclude with some recommendations for how to created and document web-scale datasets from a scrape of the internet.
+    </details>
+
+    > This paper only discusses benchmark contamination of pretraining corpora in Section 4.2. The authors also adopt a more aggressive N-gram matching method for contamination detection.
 1. **Data Contamination: From Memorization to Exploitation** (ACL 2022 Short) ![](https://img.shields.io/badge/Analysis-brown) <br />
     *Inbal Magar, Roy Schwartz*
     [[paper](https://aclanthology.org/2022.acl-short.18/)]
@@ -73,6 +81,12 @@ In this paper list, we tag each paper with one or more labels defined in the tab
     </details>
 
     > This paper is not all about data contamination. It documents known evidence of contamination when possible (Appendix G).
+1. **Can we trust the evaluation on ChatGPT?** (TrustNLP 2023) ![](https://img.shields.io/badge/Analysis-brown) <br />
+    *Rachith Aiyappa, Jisun An, Haewoon Kwak, Yong-Yeol Ahn*
+    [[paper](https://aclanthology.org/2023.trustnlp-1.5/)]
+    <details><summary><b>Abstract</b></summary>
+    ChatGPT, the first large language model (LLM) with mass adoption, has demonstrated remarkable performance in numerous natural language tasks. Despite its evident usefulness, evaluating ChatGPT's performance in diverse problem domains remains challenging due to the closed nature of the model and its continuous updates via Reinforcement Learning from Human Feedback (RLHF). We highlight the issue of data contamination in ChatGPT evaluations, with a case study of the task of stance detection. We discuss the challenge of preventing data contamination and ensuring fair model evaluation in the age of closed and continuously trained models.
+    </details>
 1. **Koala: An Index for Quantifying Overlaps with Pre-training Corpora** (EMNLP 2023 Demo) ![](https://img.shields.io/badge/Tool-purple) <br />
     *Thuy-Trang Vu, Xuanli He, Gholamreza Haffari, Ehsan Shareghi*
     [[paper](https://aclanthology.org/2023.emnlp-demo.7/)]

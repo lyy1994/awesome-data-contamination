@@ -454,6 +454,12 @@ In this paper list, we tag each paper with one or more labels defined in the tab
     <details><summary><b>Abstract</b></summary>
     As large language models achieve impressive scores on traditional benchmarks, an increasing number of researchers are becoming concerned about benchmark data leakage during pre-training, commonly known as the data contamination problem. To ensure fair evaluation, recent benchmarks release only the training and validation sets, keeping the test set labels closed-source. They require anyone wishing to evaluate his language model to submit the model's predictions for centralized processing and then publish the model's result on their leaderboard. However, this submission process is inefficient and prevents effective error analysis. To address this issue, we propose to variabilize benchmarks and evaluate language models dynamically. Specifically, we extract variables from each test case and define a value range for each variable. For each evaluation, we sample new values from these value ranges to create unique test cases, thus ensuring a fresh evaluation each time. We applied this variable perturbation method to four datasets: GSM8K, ARC, CommonsenseQA, and TruthfulQA, which cover mathematical generation and multiple-choice tasks. Our experimental results demonstrate that this approach provides a more accurate assessment of the true capabilities of language models, effectively mitigating the contamination problem.
     </details>
+1. **Decentralized Arena via Collective LLM Intelligence** (Blog, Oct 2024) ![](https://img.shields.io/badge/Preventative-blue) <br />
+    *Yanbin Yin, Zhen Wang, Kun Zhou, Xiangdong Zhang, Shibo Hao, Yi Gu, Jieyuan Liu, Somanshu Singla, Tianyang Liu, Xing Eric P., Zhengzhong Liu, Haojian Jin, Zhiting Hu*
+    [[blog](https://de-arena.maitrix.org/)] [[leaderboard](https://huggingface.co/spaces/LLM360/de-arena)]
+    <details><summary><b>Abstract</b></summary>
+    We release Decentralized Arena that automates and scales “Chatbot Arena” for LLM evaluation across various fine-grained dimensions (e.g., math – algebra, geometry, probability; logical reasoning, social reasoning, biology, chemistry, …). The evaluation is decentralized and democratic, with all LLMs participating in evaluating others. It achieves a 95% correlation with Chatbot Arena's overall rankings, while being fully transparent and reproducible.
+    </details>
 
 <a id="resources"></a>
 ## 🧰 Resources

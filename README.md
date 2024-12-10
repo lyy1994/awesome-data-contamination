@@ -9,6 +9,7 @@ The paper list on [data contamination](https://papers.nips.cc/paper/2020/hash/14
 
 ## 🔔 News
 
+- **[2024-12-06]** We are thrilled to announce <a href="https://arxiv.org/abs/2412.04947">C<sup>2</sup>LEVA</a>, an effort toward building a comprehensive bilingual benchmark with systematic contamination prevention. 🔥🔥🔥
 - **[2024-01-02]** We create this repository to maintain a paper list on *Data Contamination*.
 
 ## 🔍 Contents
@@ -45,6 +46,7 @@ In this paper list, we tag each paper with one or more labels defined in the tab
 | ![](https://img.shields.io/badge/Tool-purple) | This paper describes or provides a system or software for handling various data contamination challenges, e.g., detecting contamination, providing a contamination index, etc. |
 | ![](https://img.shields.io/badge/Dataset-orange) | This paper releases datasets directly targeted at data contamination, i.e., not general-purpose datasets like pretraining corpora. |
 | ![](https://img.shields.io/badge/Survey-cyan) | This is a data contamination survey paper. |
+| ![](https://img.shields.io/badge/Multimodality-yellow) | This work targets beyond the text modality. |
 
 <a id="list"></a>
 ### 🎯 The List
@@ -248,6 +250,12 @@ In this paper list, we tag each paper with one or more labels defined in the tab
     <details><summary><b>Abstract</b></summary>
     Understanding textual description to generate code seems to be an achieved capability of instruction-following Large Language Models (LLMs) in zero-shot scenario. However, there is a severe possibility that this translation ability may be influenced by having seen target textual descriptions and the related code. This effect is known as Data Contamination. In this study, we investigate the impact of Data Contamination on the performance of GPT-3.5 in the Text-to-SQL code-generating tasks. Hence, we introduce a novel method to detect Data Contamination in GPTs and examine GPT-3.5's Text-to-SQL performances using the known Spider Dataset and our new unfamiliar dataset Termite. Furthermore, we analyze GPT-3.5's efficacy on databases with modified information via an adversarial table disconnection (ATD) approach, complicating Text-to-SQL tasks by removing structural pieces of information from the database. Our results indicate a significant performance drop in GPT-3.5 on the unfamiliar Termite dataset, even with ATD modifications, highlighting the effect of Data Contamination on LLMs in Text-to-SQL translation tasks.
     </details>
+1. **Do Membership Inference Attacks Work on Large Language Models?** (COLM 2024) ![](https://img.shields.io/badge/Analysis-brown) <br />
+    *Michael Duan, Anshuman Suri, Niloofar Mireshghallah, Sewon Min, Weijia Shi, Luke Zettlemoyer, Yulia Tsvetkov, Yejin Choi, David Evans, Hannaneh Hajishirzi*
+    [[paper](https://arxiv.org/abs/2402.07841)]
+    <details><summary><b>Abstract</b></summary>
+    Membership inference attacks (MIAs) attempt to predict whether a particular datapoint is a member of a target model's training data. Despite extensive research on traditional machine learning models, there has been limited work studying MIA on the pre-training data of large language models (LLMs). We perform a large-scale evaluation of MIAs over a suite of language models (LMs) trained on the Pile, ranging from 160M to 12B parameters. We find that MIAs barely outperform random guessing for most settings across varying LLM sizes and domains. Our further analyses reveal that this poor performance can be attributed to (1) the combination of a large dataset and few training iterations, and (2) an inherently fuzzy boundary between members and non-members. We identify specific settings where LLMs have been shown to be vulnerable to membership inference and show that the apparent success in such settings can be attributed to a distribution shift, such as when members and non-members are drawn from the seemingly identical domain but with different temporal ranges. We release our code and data as a unified benchmark package that includes all existing MIAs, supporting future work.
+    </details>
 1. **Benchmark Self-Evolving: A Multi-Agent Framework for Dynamic LLM Evaluation** (arXiv, 18 Feb 2024) ![](https://img.shields.io/badge/Dataset-orange)![](https://img.shields.io/badge/Preventative-blue) <br />
     *Siyuan Wang, Zhuohan Long, Zhihao Fan, Zhongyu Wei, Xuanjing Huang*
     [[paper](https://arxiv.org/abs/2402.11443)] [[code](https://github.com/NanshineLoong/Self-Evolving-Benchmark)]
@@ -290,7 +298,7 @@ In this paper list, we tag each paper with one or more labels defined in the tab
     <details><summary><b>Abstract</b></summary>
     Benchmarking is the de-facto standard for evaluating LLMs, due to its speed, replicability and low cost. However, recent work has pointed out that the majority of the open source benchmarks available today have been contaminated or leaked into LLMs, meaning that LLMs have access to test data during pretraining and/or fine-tuning. This raises serious concerns about the validity of benchmarking studies conducted so far and the future of evaluation using benchmarks. To solve this problem, we propose Private Benchmarking, a solution where test datasets are kept private and models are evaluated without revealing the test data to the model. We describe various scenarios (depending on the trust placed on model owners or dataset owners), and present solutions to avoid data contamination using private benchmarking. For scenarios where the model weights need to be kept private, we describe solutions from confidential computing and cryptography that can aid in private benchmarking. Finally, we present solutions the problem of benchmark dataset auditing, to ensure that private benchmarks are of sufficiently high quality.
     </details>
-1. **NPHardEval4V: A Dynamic Reasoning Benchmark of Multimodal Large Language Models** (arXiv, 4 Mar 2024) ![](https://img.shields.io/badge/Preventative-blue) <br />
+1. **NPHardEval4V: A Dynamic Reasoning Benchmark of Multimodal Large Language Models** (arXiv, 4 Mar 2024) ![](https://img.shields.io/badge/Preventative-blue)![](https://img.shields.io/badge/Multimodality-yellow) <br />
     *Lizhou Fan, Wenyue Hua, Xiang Li, Kaijie Zhu, Mingyu Jin, Lingyao Li, Haoyang Ling, Jinkui Chi, Jindong Wang, Xin Ma, Yongfeng Zhang*
     [[paper](https://arxiv.org/abs/2403.01777)] [[code](https://github.com/lizhouf/NPHardEval4V)]
     <details><summary><b>Abstract</b></summary>
@@ -319,6 +327,12 @@ In this paper list, we tag each paper with one or more labels defined in the tab
     [[paper](https://openreview.net/forum?id=AqN23oqraW)] [[website](https://kola.xlore.cn/)]
     <details><summary><b>Abstract</b></summary>
     The unprecedented performance of large language models (LLMs) necessitates improvements in evaluations. Rather than merely exploring the breadth of LLM abilities, we believe meticulous and thoughtful designs are essential to thorough, unbiased, and applicable evaluations. Given the importance of world knowledge to LLMs, we construct a Knowledge-oriented LLM Assessment benchmark (KoLA), in which we carefully design three crucial factors: (1) For ability modeling, we mimic human cognition to form a four-level taxonomy of knowledge-related abilities, covering 19 tasks. (2) For data, to ensure fair comparisons, we use both Wikipedia, a corpus prevalently pre-trained by LLMs, along with continuously collected emerging corpora, aiming to evaluate the capacity to handle unseen data and evolving knowledge. (3) For evaluation criteria, we adopt a contrastive system, including overall standard scores for better numerical comparability across tasks and models, and a unique self-contrast metric for automatically evaluating knowledge-creating ability. We evaluate 21 open-source and commercial LLMs and obtain some intriguing findings. The KoLA dataset will be updated every three months to provide timely references for developing LLMs and knowledge-related systems.
+    </details>
+1. **Concerned with Data Contamination? Assessing Countermeasures in Code Language Model** (25 Mar 2024) ![](https://img.shields.io/badge/Analysis-brown)![](https://img.shields.io/badge/Dataset-orange) <br />
+    *Jialun Cao, Wuqi Zhang, Shing-Chi Cheung*
+    [[paper](https://arxiv.org/abs/2403.16898)]
+    <details><summary><b>Abstract</b></summary>
+    Various techniques have been proposed to leverage the capabilities of code language models (CLMs) for SE tasks. While these techniques typically evaluate their effectiveness using publicly available datasets, the evaluation can be subject to data contamination threats where the evaluation datasets have already been used to train the concerned CLMs. This can significantly affect the reliability of the evaluation. Different countermeasures have been suggested to mitigate the data contamination threat. Countermeasures include using more recent data, curating new data, and refactoring existing data are introduced, yet it is unclear whether these countermeasures could really mitigate data contamination threats to model evaluation. To fill the gap, we systematically study to quantify the impacts of these countermeasures on CLMs' performance. To facilitate the study, we collected over 2 million Python functions with timestamps ranging from January 1st, 2018, to December 31st, 2023. The data created before the models' cut-off date are considered "contaminated data", while the data where the countermeasures are taken are regarded as "cleansed data". We study the impact of these countermeasures by investigating the difference in CLMs' performance on contaminated and cleansed data derived from different countermeasures. Our experiments yield several interesting observations. For instance, CLMs do not necessarily perform worse on data after the models' cut-off date; on the contrary, they sometimes perform better. In addition, refactoring did not always result in decreased performance; it could lead to improvements instead. Furthermore, existing metrics such as perplexity cannot distinguish contaminated/cleansed data. We hope that the results and observations could help deepen the understanding of CLMs' capabilities and inform the community about data contamination.
     </details>
 1. **Top Leaderboard Ranking = Top Coding Proficiency, Always? EvoEval: Evolving Coding Benchmarks via LLM** (arXiv, 28 Mar 2024) ![](https://img.shields.io/badge/Preventative-blue)![](https://img.shields.io/badge/Tool-purple) <br />
     *Chunqiu Steven Xia, Yinlin Deng, Lingming Zhang*
@@ -514,7 +528,7 @@ In this paper list, we tag each paper with one or more labels defined in the tab
     <details><summary><b>Abstract</b></summary>
     We release Decentralized Arena that automates and scales “Chatbot Arena” for LLM evaluation across various fine-grained dimensions (e.g., math – algebra, geometry, probability; logical reasoning, social reasoning, biology, chemistry, …). The evaluation is decentralized and democratic, with all LLMs participating in evaluating others. It achieves a 95% correlation with Chatbot Arena's overall rankings, while being fully transparent and reproducible.
     </details>
-1. **Dynamic Multimodal Evaluation with Flexible Complexity by Vision-Language Bootstrapping** (arXiv, 11 Oct 2024) ![](https://img.shields.io/badge/Preventative-blue) <br />
+1. **Dynamic Multimodal Evaluation with Flexible Complexity by Vision-Language Bootstrapping** (arXiv, 11 Oct 2024) ![](https://img.shields.io/badge/Preventative-blue)![](https://img.shields.io/badge/Multimodality-yellow) <br />
     *Yue Yang, Shuibai Zhang, Wenqi Shao, Kaipeng Zhang, Yi Bin, Yu Wang, Ping Luo*
     [[paper](https://arxiv.org/abs/2410.08695)]
     <details><summary><b>Abstract</b></summary>
@@ -531,6 +545,18 @@ In this paper list, we tag each paper with one or more labels defined in the tab
     [[paper](https://arxiv.org/abs/2411.03923)]
     <details><summary><b>Abstract</b></summary>
     Hampering the interpretation of benchmark scores, evaluation data contamination has become a growing concern in the evaluation of LLMs, and an active area of research studies its effects. While evaluation data contamination is easily understood intuitively, it is surprisingly difficult to define precisely which samples should be considered contaminated and, consequently, how it impacts benchmark scores. We propose that these questions should be addressed together and that contamination metrics can be assessed based on whether models benefit from the examples they mark contaminated. We propose a novel analysis method called ConTAM, and show with a large scale survey of existing and novel n-gram based contamination metrics across 13 benchmarks and 7 models from 2 different families that ConTAM can be used to better understand evaluation data contamination and its effects. We find that contamination may have a much larger effect than reported in recent LLM releases and benefits models differently at different scales. We also find that considering only the longest contaminated substring provides a better signal than considering a union of all contaminated substrings, and that doing model and benchmark specific threshold analysis greatly increases the specificity of the results. Lastly, we investigate the impact of hyperparameter choices, finding that, among other things, both using larger values of n and disregarding matches that are infrequent in the pre-training data lead to many false negatives. With ConTAM, we provide a method to empirically ground evaluation data contamination metrics in downstream effects. With our exploration, we shed light on how evaluation data contamination can impact LLMs and provide insight into the considerations important when doing contamination analysis. We end our paper by discussing these in more detail and providing concrete suggestions for future work.
+    </details>
+1. **Both Text and Images Leaked! A Systematic Analysis of Multimodal LLM Data Contamination** (arXiv, 6 Nov 2024) ![](https://img.shields.io/badge/Reactive-green)![](https://img.shields.io/badge/Multimodality-yellow) <br />
+    *Dingjie Song, Sicheng Lai, Shunian Chen, Lichao Sun, Benyou Wang*
+    [[paper](https://arxiv.org/abs/2411.03823)] [[code](https://github.com/MLLM-Data-Contamination/MM-Detect)]
+    <details><summary><b>Abstract</b></summary>
+    The rapid progression of multimodal large language models (MLLMs) has demonstrated superior performance on various multimodal benchmarks. However, the issue of data contamination during training creates challenges in performance evaluation and comparison. While numerous methods exist for detecting dataset contamination in large language models (LLMs), they are less effective for MLLMs due to their various modalities and multiple training phases. In this study, we introduce a multimodal data contamination detection framework, MM-Detect, designed for MLLMs. Our experimental results indicate that MM-Detect is sensitive to varying degrees of contamination and can highlight significant performance improvements due to leakage of the training set of multimodal benchmarks. Furthermore, We also explore the possibility of contamination originating from the pre-training phase of LLMs used by MLLMs and the fine-tuning phase of MLLMs, offering new insights into the stages at which contamination may be introduced.
+    </details>
+1. **C<sup>2</sup>LEVA: Toward Comprehensive and Contamination-Free Language Model Evaluation** (arXiv, 6 Dec 2024) ![](https://img.shields.io/badge/Preventative-blue)![](https://img.shields.io/badge/Dataset-orange) <br />
+    *Yanyang Li, Tin Long Wong, Cheung To Hung, Jianqiao Zhao, Duo Zheng, Ka Wai Liu, Michael R. Lyu, Liwei Wang*
+    [[paper](https://arxiv.org/abs/2412.04947)] [[website](http://www.lavicleva.com/c2leva/)]
+    <details><summary><b>Abstract</b></summary>
+    Recent advances in large language models (LLMs) have shown significant promise, yet their evaluation raises concerns, particularly regarding data contamination due to the lack of access to proprietary training data. To address this issue, we present C<sup>2</sup>LEVA, a comprehensive bilingual benchmark featuring systematic contamination prevention. C<sup>2</sup>LEVA firstly offers a holistic evaluation encompassing 22 tasks, each targeting a specific application or ability of LLMs, and secondly a trustworthy assessment due to our contamination-free tasks, ensured by a systematic contamination prevention strategy that fully automates test data renewal and enforces data protection during benchmark data release. Our large-scale evaluation of 15 open-source and proprietary models demonstrates the effectiveness of C<sup>2</sup>LEVA.
     </details>
 
 <a id="resources"></a>
@@ -650,6 +676,30 @@ Please cite our repo if find our work useful.
 }
 ```
 
+You are also welcome to cite our papers.
+
+```bibtex
+@misc{li2024c2leva,
+      title={C$^2$LEVA: Toward Comprehensive and Contamination-Free Language Model Evaluation}, 
+      author={Yanyang Li and Tin Long Wong and Cheung To Hung and Jianqiao Zhao and Duo Zheng and Ka Wai Liu and Michael R. Lyu and Liwei Wang},
+      year={2024},
+      eprint={2412.04947},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2412.04947}, 
+}
+
+@misc{li2023cleva,
+      title={CLEVA: Chinese Language Models EVAluation Platform}, 
+      author={Yanyang Li and Jianqiao Zhao and Duo Zheng and Zi-Yuan Hu and Zhi Chen and Xiaohui Su and Yongfeng Huang and Shijia Huang and Dahua Lin and Michael R. Lyu and Liwei Wang},
+      year={2023},
+      eprint={2308.04813},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2308.04813}, 
+}
+```
+
 <a id="contribution"></a>
 ## 🎉 Contribution
 
@@ -686,3 +736,5 @@ We referred to the template of [Knowledge Editing for LLMs Papers](https://githu
     src="https://api.star-history.com/svg?repos=lyy1994/awesome-data-contamination&type=Date"
   />
 </picture>
+
+<p align="right"><a href="#top">🔝Back to top</a></p>

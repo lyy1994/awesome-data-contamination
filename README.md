@@ -528,6 +528,12 @@ In this paper list, we tag each paper with one or more labels defined in the tab
     <details><summary><b>Abstract</b></summary>
     We release Decentralized Arena that automates and scales “Chatbot Arena” for LLM evaluation across various fine-grained dimensions (e.g., math – algebra, geometry, probability; logical reasoning, social reasoning, biology, chemistry, …). The evaluation is decentralized and democratic, with all LLMs participating in evaluating others. It achieves a 95% correlation with Chatbot Arena's overall rankings, while being fully transparent and reproducible.
     </details>
+1. **Language model developers should report train-test overlap** (arXiv, 10 Oct 2024) ![](https://img.shields.io/badge/Analysis-brown) <br />
+    *Andy K Zhang, Kevin Klyman, Yifan Mai, Yoav Levine, Yian Zhang, Rishi Bommasani, Percy Liang*
+    [[paper](https://arxiv.org/abs/2410.08385)] [[code](https://github.com/stanford-crfm/data-overlap)]
+    <details><summary><b>Abstract</b></summary>
+    Language models are extensively evaluated, but correctly interpreting evaluation results requires knowledge of train-test overlap which refers to the extent to which the language model is trained on the very data it is being tested on. The public currently lacks adequate information about train-test overlap: most models have no public train-test overlap statistics, and third parties cannot directly measure train-test overlap since they do not have access to the training data. To make this clear, we document the practices of 30 model developers, finding that just 9 developers report train-test overlap: 4 developers release training data under open-source licenses, enabling the community to directly measure train-test overlap, and 5 developers publish their train-test overlap methodology and statistics. By engaging with language model developers, we provide novel information about train-test overlap for three additional developers. Overall, we take the position that language model developers should publish train-test overlap statistics and/or training data whenever they report evaluation results on public test sets. We hope our work increases transparency into train-test overlap to increase the community-wide trust in model evaluations.
+    </details>
 1. **Dynamic Multimodal Evaluation with Flexible Complexity by Vision-Language Bootstrapping** (arXiv, 11 Oct 2024) ![](https://img.shields.io/badge/Preventative-blue)![](https://img.shields.io/badge/Multimodality-yellow) <br />
     *Yue Yang, Shuibai Zhang, Wenqi Shao, Kaipeng Zhang, Yi Bin, Yu Wang, Ping Luo*
     [[paper](https://arxiv.org/abs/2410.08695)]
@@ -569,6 +575,16 @@ In this paper list, we tag each paper with one or more labels defined in the tab
     [[paper](https://arxiv.org/abs/2502.17521)] [[website](https://github.com/SeekingDream/Static-to-Dynamic-LLMEval)]
     <details><summary><b>Abstract</b></summary>
     Data contamination has received increasing attention in the era of large language models (LLMs) due to their reliance on vast Internet-derived training corpora. To mitigate the risk of potential data contamination, LLM benchmarking has undergone a transformation from static to dynamic benchmarking. In this work, we conduct an in-depth analysis of existing static to dynamic benchmarking methods aimed at reducing data contamination risks. We first examine methods that enhance static benchmarks and identify their inherent limitations. We then highlight a critical gap-the lack of standardized criteria for evaluating dynamic benchmarks. Based on this observation, we propose a series of optimal design principles for dynamic benchmarking and analyze the limitations of existing dynamic benchmarks. This survey provides a concise yet comprehensive overview of recent advancements in data contamination research, offering valuable insights and a clear guide for future research efforts. We maintain a GitHub repository to continuously collect both static and dynamic benchmarking methods for LLMs. The repository can be found at this link.
+    </details>
+1. **MathArena: Evaluating LLMs on Uncontaminated Math Competitions** (Feb 2025) ![](https://img.shields.io/badge/Preventative-blue) <br />
+    *Mislav Balunović and Jasper Dekoninck and Ivo Petrov and Nikola Jovanović and Martin Vechev*
+    [[website](https://matharena.ai/)] [[code](https://github.com/eth-sri/matharena)]
+    <details><summary><b>Abstract</b></summary>
+    MathArena is a platform for evaluation of LLMs on the latest math competitions and olympiads. Our mission is rigorous assessment of the reasoning and generalization capabilities of LLMs on new math problems which the models have not seen during training. To ensure a fair and uncontaminated evaluation, we exclusively test models on competitions that took place after their release, avoiding retroactive assessments on potentially leaked or pre-trained material. By performing standardized evaluation we ensure model scores are actually comparable and are not dependent on the specific evaluation setup of the model provider.
+
+    To show the model performance, we publish a leaderboard for each competition showing the scores of different models individual problems. Additionally, we will include a main table that includes model performance on all competitions. To evaluate performance, we run each model 4 times on each problem, computing the average score and the cost of the model (in USD) across all runs.
+
+    We open sourced our evaluation code at: https://github.com/eth-sri/matharena.
     </details>
 
 <a id="resources"></a>

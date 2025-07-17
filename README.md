@@ -586,6 +586,12 @@ In this paper list, we tag each paper with one or more labels defined in the tab
 
     We open sourced our evaluation code at: https://github.com/eth-sri/matharena.
     </details>
+1. **How Can I Publish My LLM Benchmark Without Giving the True Answers Away?** (arXiv, 23 May 2025) ![](https://img.shields.io/badge/Preventative-blue)![](https://img.shields.io/badge/Reactive-green) <br />
+    *Takashi Ishida, Thanawat Lodkaew, Ikko Yamane*
+    [[paper](https://arxiv.org/abs/2505.18102)]
+    <details><summary><b>Abstract</b></summary>
+    Publishing a large language model (LLM) benchmark on the Internet risks contaminating future LLMs: the benchmark may be unintentionally (or intentionally) used to train or select a model. A common mitigation is to keep the benchmark private and let participants submit their models or predictions to the organizers. However, this strategy will require trust in a single organization and still permits test-set overfitting through repeated queries. To overcome this issue, we propose a way to publish benchmarks without completely disclosing the ground-truth answers to the questions, while still maintaining the ability to openly evaluate LLMs. Our main idea is to inject randomness to the answers by preparing several logically correct answers, and only include one of them as the solution in the benchmark. This reduces the best possible accuracy, i.e., Bayes accuracy, of the benchmark. Not only is this helpful to keep us from disclosing the ground truth, but this approach also offers a test for detecting data contamination. In principle, even fully capable models should not surpass the Bayes accuracy. If a model surpasses this ceiling despite this expectation, this is a strong signal of data contamination. We present experimental evidence that our method can detect data contamination accurately on a wide range of benchmarks, models, and training methodologies.
+    </details>
 
 <a id="resources"></a>
 ## 🧰 Resources

@@ -769,6 +769,16 @@ Please cite our repo if find our work useful.
 You are also welcome to cite our papers.
 
 ```bibtex
+@misc{yi2026membership,
+      title={Membership Inference on LLMs in the Wild}, 
+      author={Jiatong Yi and Yanyang Li},
+      year={2026},
+      eprint={2601.11314},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2601.11314}, 
+}
+
 @misc{li2024c2leva,
       title={C$^2$LEVA: Toward Comprehensive and Contamination-Free Language Model Evaluation}, 
       author={Yanyang Li and Tin Long Wong and Cheung To Hung and Jianqiao Zhao and Duo Zheng and Ka Wai Liu and Michael R. Lyu and Liwei Wang},

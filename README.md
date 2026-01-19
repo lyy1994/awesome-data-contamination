@@ -9,7 +9,8 @@ The paper list on [data contamination](https://papers.nips.cc/paper/2020/hash/14
 
 ## 🔔 News
 
-- **[2024-12-06]** We are thrilled to announce <a href="https://arxiv.org/abs/2412.04947">C<sup>2</sup>LEVA</a>, an effort toward building a comprehensive bilingual benchmark with systematic contamination prevention. 🔥🔥🔥
+- **[2026-01-19]** Our latest work, <a href="https://arxiv.org/abs/2601.11314">SimMIA</a>, introduces a simple yet effective membership inference attack on LLMs under a strictly black-box setting, where only generated text is available for attackers. 🔥🔥🔥
+- **[2024-12-06]** We are thrilled to announce <a href="https://arxiv.org/abs/2412.04947">C<sup>2</sup>LEVA</a>, an effort toward building a comprehensive bilingual benchmark with systematic contamination prevention.
 - **[2024-01-02]** We create this repository to maintain a paper list on *Data Contamination*.
 
 ## 🔍 Contents
@@ -640,6 +641,12 @@ In this paper list, we tag each paper with one or more labels defined in the tab
     [[paper](https://aclanthology.org/2025.emnlp-main.1268/)] [[code](https://github.com/xuhaoxh/infini-gram-mini)] [[website](https://infini-gram-mini.io/)]
     <details><summary><b>Abstract</b></summary>
     Language models are trained mainly on massive text data from the Internet, and it becomes increasingly important to understand this data source. Exact-match search engines enable searching in large text corpora – counting string appearances and retrieving the enclosing documents – yet the high storage overhead hinders their application on Internet-scale data. We present Infini-gram mini, an efficient and scalable system that can make petabyte-level text corpora searchable. Based on the FM-index data structure (Ferragina and Manzini, 2000), which simultaneously indexes and compresses text, our system creates indexes with size only 44% of the corpus. Infini-gram mini greatly improves upon the best existing implementation of FM-index in terms of indexing speed (18×) and memory use during both indexing (3.2× reduction) and querying (down to a negligible amount). We index 83TB of Internet text in 99 days with a single 128-core CPU node (or 19 hours if using 137 such nodes). We show one important use case of Infini-gram mini in a large-scale analysis of benchmark contamination. We find several core LM evaluation benchmarks to be heavily contaminated in Internet crawls (up to 74.2% in GSM8K), which could lead to overestimating the capabilities of language models if trained on such data. We host a benchmark contamination bulletin to share the contamination rate of many core and community-contributed benchmarks. We also release a web interface and an API endpoint to serve general search queries on Infini-gram mini indexes.
+    </details>
+1. **Membership Inference on LLMs in the Wild** (arXiv, 16 Jan 2026) ![](https://img.shields.io/badge/Reactive-green)![](https://img.shields.io/badge/Tool-purple)![](https://img.shields.io/badge/Dataset-orange) <br />
+    *Jiatong Yi, Yanyang Li*
+    [[paper](https://arxiv.org/abs/2601.11314)] [[code](https://github.com/simmia2026/SimMIA)] [[website](https://simmia2026.github.io/)] [[data](https://huggingface.co/datasets/SimMIA/WikiMIA-25)]
+    <details><summary><b>Abstract</b></summary>
+    Membership Inference Attacks (MIAs) act as a crucial auditing tool for the opaque training data of Large Language Models (LLMs). However, existing techniques predominantly rely on inaccessible model internals (e.g., logits) or suffer from poor generalization across domains in strict black-box settings where only generated text is available. In this work, we propose SimMIA, a robust MIA framework tailored for this text-only regime by leveraging an advanced sampling strategy and scoring mechanism. Furthermore, we present WikiMIA-25, a new benchmark curated to evaluate MIA performance on modern proprietary LLMs. Experiments demonstrate that SimMIA achieves state-of-the-art results in the black-box setting, rivaling baselines that exploit internal model information.
     </details>
 
 <a id="resources"></a>

@@ -755,7 +755,7 @@ A reference list of contamination detectors and contamination indices is as foll
           <li><a href="https://github.com/liyucheng09/Contamination_Detector">Contamination Detector for LLMs Evaluation</a></li>
           <li><a href="https://github.com/nlx-group/overlapy">Overlapy</a></li>
           <li><a href="https://github.com/ntunlp/LLMSanitize">LLMSanitize</a></li>
-          <li><a herf="https://github.com/simmia2026/SimMIA">SimMIA</a></li>
+          <li><a href="https://github.com/simmia2026/SimMIA">SimMIA</a></li>
           <li>......</li>
         </ul>
       </td>

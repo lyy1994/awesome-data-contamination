@@ -55,13 +55,14 @@ In this paper list, we tag each paper with one or more labels defined in the tab
 > [!Note]
 > The list is sorted by the date of the first time the paper was released.
 
-1. **Membership Inference Attacks against Machine Learning Models** () ![](https://img.shields.io/badge/Reactive-green) <br />
+1. **Membership Inference Attacks against Machine Learning Models** (IEEE S&P 2017) ![](https://img.shields.io/badge/Reactive-green) <br />
    *Reza Shokri, Marco Stronati, Congzheng Song, Vitaly Shmatikov*
    [[paper](https://arxiv.org/abs/1610.05820)] 
    <details><summary><b>Abstract</b></summary>
        We quantitatively investigate how machine learning models leak information about the individual data records on which they were trained. We focus on the basic membership inference attack: given a data record and black-box access to a model, determine if the record was in the model's training dataset. To perform membership inference against a target model, we make adversarial use of machine learning and train our own inference model to recognize differences in the target model's predictions on the inputs that it trained on versus the inputs that it did not train on.
 We empirically evaluate our inference techniques on classification models trained by commercial "machine learning as a service" providers such as Google and Amazon. Using realistic datasets and classification tasks, including a hospital discharge dataset whose membership is sensitive from the privacy perspective, we show that these models can be vulnerable to membership inference attacks. We then investigate the factors that influence this leakage and evaluate mitigation strategies.
    </details>
+   
 1. **Language Models are Few-Shot Learners** (NeurIPS 2020) ![](https://img.shields.io/badge/Reactive-green)![](https://img.shields.io/badge/Analysis-brown) <br />
     *Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel Ziegler, Jeffrey Wu, Clemens Winter, Chris Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, Dario Amodei*
     [[paper](https://papers.nips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html)]
